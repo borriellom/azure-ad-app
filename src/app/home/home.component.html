@@ -1,0 +1,38 @@
+<div class="container">
+	<h1>Home</h1>
+
+	<!-- <div class="dropdown">
+		<button class="btn btn-default dropdown-toggle" type="button"
+			id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true"
+			aria-expanded="true">
+			Roles <span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+			<li *ngFor="let role of roles"><a href="#">{{role}}</a></li>
+		</ul>
+	</div> -->
+
+	<div *ngIf="roles" class="panel panel-default" style="width:70%;">
+		<div class="panel-heading">
+			<h3 class="panel-title">User Roles</h3>
+		</div>
+
+		<ul class="list-group">
+			<li *ngFor="let role of roles" class="list-group-item">{{role}}</li>
+		</ul>
+	</div>
+
+	<div class="panel panel-default" style="width:70%;">
+		<div class="panel panel-heading">
+			<h3 class="panel-title">Message from API</h3>
+		</div>
+		<div class="panel-body">
+			<div *ngIf="info">
+				<h4>id: {{info.id}}</h4>
+				<h4>content: {{info.content}}</h4>
+			</div>
+		</div>
+	</div>
+	<button class="btn btn-primary" (click)="logout()" style="clear: left;">Logout</button>
+
+</div>
