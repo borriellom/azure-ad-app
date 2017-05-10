@@ -8,13 +8,13 @@ export class AuthConfigService {
         
 
         var endpoints = {
-                "https://localhost:8443": "[Azure AD Application ID]"
+                "https://localhost:8443": "bd1e65e4-095a-4491-8b78-834d90a76a41"
         };
         return {
-            tenant: "[Azure AD Tenant GUID]",
-            clientId: "[Azure AD Application ID]",
-            redirectUri: "https://localhost:4200",
-            postLogoutRedirectUrl: "https://localhost:4200",
+            tenant: "martaborriellogmail.onmicrosoft.com",
+            clientId: "bd1e65e4-095a-4491-8b78-834d90a76a41",
+            redirectUri: "http://angular-azure-ad.azurewebsites.net",
+            postLogoutRedirectUrl: "http://angular-azure-ad.azurewebsites.net",
 //            cacheLocation: 'localStorage', // enable this for IE, as sessionStorage does not work for localhost.
             endpoints: endpoints
         };
